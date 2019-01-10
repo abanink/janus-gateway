@@ -1811,8 +1811,9 @@ static void *janus_sipre_handler(void *data) {
 				}
 				/* Got the values, try registering now */
 				JANUS_LOG(LOG_VERB, "Registering user %s (auth=%s, secret %s) @ %s through %s (outbound proxy: %s)\n",
-					user_id, secret_text, user_host,
+					user_id, 
 					authuser_text != NULL ? authuser_text : user_id,
+					secret_text, user_host,
 					proxy_text != NULL ? proxy_text : "(null)",
 					obproxy_text != NULL ? obproxy_text : "none");
 			}
